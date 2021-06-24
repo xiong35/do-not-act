@@ -14,7 +14,7 @@
   <style>
     main {
       max-width: 90vw;
-      width: 500px;
+      width: 350px;
       min-height: 80vh;
       margin: auto;
       display: flex;
@@ -52,17 +52,30 @@
 
   <body>
     <main>
-      <h3>害你在心口难开</h3>
+      <h2 id="hint">害你在心口难开</h2>
       <textarea type="text" id="input" rows="1"></textarea>
       <a id="btn">换一个</a>
     </main>
   </body>
 
   <script>
+    let timer;
     window.onload = () => {
       btn.addEventListener("click", () => {
-        const newWordId = ~~(Math.random() * all.length);
-        input.value = all[newWordId];
+        let timeLeft = 2;
+        clearInterval(timer);
+        hint.innerText = `请在 ${timeLeft} 秒内转过手机`;
+        input.value = "";
+        timer = setInterval(() => {
+          timeLeft--;
+          hint.innerText = `请在 ${timeLeft} 秒内转过手机`;
+          if (timeLeft <= 0) {
+            clearInterval(timer);
+            hint.innerText = `害你在心口难开`;
+            const newWordId = ~~(Math.random() * all.length);
+            input.value = all[newWordId];
+          }
+        }, 1000);
       });
     };
 
