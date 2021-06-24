@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>害你在心口难开 | xiong35</title>
+    <!-- <description>一款害你在心口难开发牌器</description> -->
+  </head>
+
+  <style>
+    main {
+      max-width: 90vw;
+      width: 500px;
+      min-height: 80vh;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    #input {
+      font-size: 2rem;
+      width: 100%;
+      outline: none;
+      border: none;
+      background-color: #eeeeeea1;
+      border-radius: 5px;
+      margin: 1rem 0 2rem;
+      resize: vertical;
+      font-family: inherit;
+      padding: 0.4rem 0.8rem;
+    }
+
+    #btn {
+      padding: 8px 14px;
+      background-color: #212121;
+      border-radius: 5px;
+      color: aliceblue;
+      cursor: pointer;
+      display: inline-block;
+      user-select: none;
+      -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    }
+    #btn:active {
+      background-color: #0a0a0a;
+    }
+  </style>
+
+  <body>
+    <main>
+      <h3>害你在心口难开</h3>
+      <textarea type="text" id="input" rows="1"></textarea>
+      <a id="btn">换一个</a>
+    </main>
+  </body>
+
+  <script>
+    window.onload = () => {
+      btn.addEventListener("click", () => {
+        const newWordId = ~~(Math.random() * all.length);
+        input.value = all[newWordId];
+      });
+    };
+
+    const all = [
+      '说"不说"',
+      "10秒静默",
+      "10秒张嘴",
+      "安慰别人",
+      "比耶",
+      "比中指",
+      "表示同意",
+      "不躲闪",
+      "唱歌",
+      "嘲笑别人",
+      "称赞别人",
+      "打赌",
+      "打哈欠",
+      "大声说话",
+      "大笑",
+      "道歉",
+      "瞪眼",
+      "递东西",
+      "点头",
+      "抖腿",
+      "躲闪",
+      "反问",
+      "扶额",
+      "扶眼镜",
+      "鼓掌",
+      "怀疑别人",
+      "挥手",
+      "回答问题",
+      "回头看",
+      "回忆",
+      "击掌",
+      "接东西",
+      "拒绝别人",
+      "看时间",
+      "看自己手",
+      "靠椅子",
+      "摸鼻子",
+      "摸后脑勺",
+      "摸头发",
+      "摸嘴唇",
+      "模仿别人",
+      "拿杯子",
+      "拿出东西",
+      "扭脖子",
+      "拍打别人",
+      "拍手",
+      "拍照",
+      "拍桌子",
+      "翘二郎腿",
+      "使眼色",
+      "手放口袋",
+      "手放腿上",
+      "手指别人",
+      "双手交叉抱胸",
+      "双手接触",
+      "说别动",
+      "说不怕",
+      "说不是",
+      "说不要",
+      "说不知道",
+      "说不至于",
+      "说成语",
+      "说方言",
+      "说该谁了",
+      "说好的",
+      "说好难",
+      "说好听",
+      "说回家",
+      "说开始",
+      "说考试",
+      "说可以",
+      "说肯定",
+      "说老师名字",
+      "说轮到你了",
+      "说没事",
+      "说没有",
+      "说明天",
+      "说明星名",
+      "说哪里",
+      "说你觉得",
+      "说年龄",
+      "说哦",
+      "说钱",
+      "说确实",
+      "说什么",
+      "说数字",
+      "说听不清",
+      "说为什么",
+      "说我想想",
+      "说现在",
+      "说谢谢",
+      "说也",
+      "说英文",
+      "说咱们",
+      "说脏话",
+      "说脏话",
+      "说怎么",
+      "说知道",
+      "讨论玩法",
+      "提问",
+      "推开",
+      "握拳",
+      "捂嘴",
+      "向上看",
+      "摇头",
+      "站起来",
+      "掌心向上",
+      "整理衣服",
+      "重复别人",
+      "转头",
+    ];
+  </script>
+</html>
